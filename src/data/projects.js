@@ -24,7 +24,7 @@ export const projects = [
     title: "Website Joki di Andi",
     category: "Web Development",
     tech: ["React.js", "Tailwind CSS", "Framer Motion"],
-    image: "/images/jokidiandi.png",
+    image: "/images/thumbnail_jokidiandi.png",
     demoLink: "https://jokidiandi.vercel.app/",
     githubLink: "https://github.com/ReyjiKeren/JokidiAndi",
     size: "col-span-1 lg:col-span-1 row-span-1"
