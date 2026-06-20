@@ -6,7 +6,7 @@ const About = () => {
     name: "Reyji Wiranayakatama Jizenji",
     age: "17 Years Old",
     location: "Bekasi, Indonesia",
-    email: "reyji.wiranayakatama@gmail.com",
+    email: "contactreyji@gmail.com",
     role: "Frontend Developer & UI/UX Designer"
   };
 

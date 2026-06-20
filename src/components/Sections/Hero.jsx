@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   const containerRef = useRef(null);
@@ -123,14 +123,6 @@ const Hero = () => {
             >
               View My Work
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </a>
-            
-            <a
-              href="#"
-              className="group bg-brand-card hover:bg-brand-peach/40 text-brand-text border border-brand-peach font-bold px-8 py-4 rounded-2xl-custom flex items-center justify-center gap-2 transition-all duration-300 hover:-translate-y-[2px] shadow-premium"
-            >
-              Download CV
-              <Download size={18} className="group-hover:translate-y-0.5 transition-transform" />
             </a>
           </motion.div>
         </motion.div>

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Mail, Send } from 'lucide-react';
-import { FaWhatsapp, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaInstagram } from 'react-icons/fa';
 import { useState } from 'react';
 
 const Contact = () => {
@@ -26,22 +26,16 @@ const Contact = () => {
       href: "mailto:contactreyji@gmail.com" 
     },
     { 
-      icon: <FaWhatsapp size={24} className="text-brand-primary" />, 
-      label: "WhatsApp", 
-      value: "+62 812-3456-7890", 
-      href: "https://wa.me/6281234567890" 
+      icon: <FaGithub size={24} className="text-brand-primary" />, 
+      label: "GitHub", 
+      value: "ReyjiKeren", 
+      href: "https://github.com/ReyjiKeren" 
     },
     { 
       icon: <FaInstagram size={24} className="text-brand-primary" />, 
       label: "Instagram", 
       value: "@reywrnyktm", 
       href: "https://www.instagram.com/reywrnyktm?igsh=MW54a3Q4amRkOXMzYg==" 
-    },
-    { 
-      icon: <FaLinkedin size={24} className="text-brand-primary" />, 
-      label: "LinkedIn", 
-      value: "Reyji Wiranayakatama", 
-      href: "https://linkedin.com/in/reyji" 
     }
   ];
 
