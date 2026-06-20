@@ -7,7 +7,7 @@ export const projects = [
     image: "/images/upb-project.png",
     demoLink: "https://upb-eight.vercel.app",
     githubLink: "https://github.com",
-    size: "col-span-1 lg:col-span-2 row-span-1"
+    size: "col-span-1 lg:col-span-1 row-span-1"
   },
   {
     id: 2,
@@ -17,6 +17,16 @@ export const projects = [
     image: "/images/explore-nusantara.png",
     demoLink: "https://wisata-jet.vercel.app",
     githubLink: "https://github.com",
+    size: "col-span-1 lg:col-span-1 row-span-1"
+  },
+  {
+    id: 3,
+    title: "JokidiAndi Gaming Portal",
+    category: "Web Development",
+    tech: ["React.js", "Tailwind CSS", "Framer Motion"],
+    image: "/images/jokidiandi.png",
+    demoLink: "https://github.com/ReyjiKeren/JokidiAndi",
+    githubLink: "https://github.com/ReyjiKeren/JokidiAndi",
     size: "col-span-1 lg:col-span-1 row-span-1"
   }
 ];
