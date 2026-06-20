@@ -23,6 +23,7 @@ export default {
       },
       animation: {
         'spin-slow': 'spin 8s linear infinite',
+        'border-spin': 'spin 6s linear infinite',
         'float-slow': 'float 6s ease-in-out infinite',
         'float-medium': 'float 4s ease-in-out infinite',
         'float-fast': 'float 3s ease-in-out infinite',

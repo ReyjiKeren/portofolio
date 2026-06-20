@@ -21,11 +21,11 @@ export const projects = [
   },
   {
     id: 3,
-    title: "JokidiAndi Gaming Portal",
+    title: "Website Joki di Andi",
     category: "Web Development",
     tech: ["React.js", "Tailwind CSS", "Framer Motion"],
     image: "/images/jokidiandi.png",
-    demoLink: "https://github.com/ReyjiKeren/JokidiAndi",
+    demoLink: "https://jokidiandi.vercel.app/",
     githubLink: "https://github.com/ReyjiKeren/JokidiAndi",
     size: "col-span-1 lg:col-span-1 row-span-1"
   }
