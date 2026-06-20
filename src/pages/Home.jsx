@@ -1,104 +1,47 @@
-import { useState, useEffect } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-import { IoArrowBack } from 'react-icons/io5';
-import LightRays from '../components/LightRays/LightRays';
-import Stepper from '../components/Stepper/Stepper';
-import FlowingMenu from '../components/FlowingMenu/FlowingMenu';
-// Sections
-import Projects from '../components/Sections/Projects';
+import Navbar from '../components/Sections/Navbar';
+import Hero from '../components/Sections/Hero';
+import Skills from '../components/Sections/Skills';
 import About from '../components/Sections/About';
-import Experience from '../components/Sections/Experience';
+import Projects from '../components/Sections/Projects';
+import Services from '../components/Sections/Services';
+import TechStack from '../components/Sections/TechStack';
 import Contact from '../components/Sections/Contact';
+import Footer from '../components/Sections/Footer';
 
 const Home = () => {
-    const [showContent, setShowContent] = useState(false);
-    const [loading, setLoading] = useState(true);
-    const [activeSection, setActiveSection] = useState(null); // 'about', 'experience', 'projects', 'contact' or null
+  return (
+    <div className="relative min-h-screen bg-brand-bg text-brand-text overflow-x-hidden selection:bg-brand-peach selection:text-brand-primary">
+      {/* Navigation Header */}
+      <Navbar />
 
-    useEffect(() => {
-        setLoading(false);
-    }, []);
+      {/* Main Sections */}
+      <main>
+        {/* 1. Hero Section */}
+        <Hero />
 
-    const handleOnboardingComplete = () => {
-        setShowContent(true);
-    };
+        {/* 2. Featured Skills Section */}
+        <Skills />
 
-    const handleSectionSelect = (id) => {
-        setActiveSection(id);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
+        {/* 3. About Section */}
+        <About />
 
-    const handleBack = () => {
-        setActiveSection(null);
-    };
+        {/* 4. Featured Projects Section */}
+        <Projects />
 
-    if (loading) return null;
+        {/* 5. Services Section */}
+        <Services />
 
-    return (
-        <>
-            <AnimatePresence mode="wait">
-                {!showContent && (
-                    <Stepper key="stepper" onComplete={handleOnboardingComplete} />
-                )}
-            </AnimatePresence>
+        {/* 6. Tech Stack Section */}
+        <TechStack />
 
-            {showContent && (
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1.5, ease: "easeInOut" }}
-                    className="relative min-h-screen bg-black"
-                >
-                    <LightRays />
+        {/* 7. Contact Section */}
+        <Contact />
+      </main>
 
-                    <main className="relative z-10">
-                        <AnimatePresence mode="wait">
-                            {/* MENU VIEW */}
-                            {!activeSection && (
-                                <motion.div
-                                    key="menu"
-                                    initial={{ opacity: 0, filter: 'blur(10px)' }}
-                                    animate={{ opacity: 1, filter: 'blur(0px)' }}
-                                    exit={{ opacity: 0, filter: 'blur(10px)', scale: 0.95 }}
-                                    transition={{ duration: 0.5 }}
-                                >
-                                    <FlowingMenu onSelect={handleSectionSelect} />
-                                </motion.div>
-                            )}
-
-                            {/* SECTION VIEW */}
-                            {activeSection && (
-                                <motion.div
-                                    key="section"
-                                    initial={{ opacity: 0, x: 20 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    exit={{ opacity: 0, x: -20 }}
-                                    transition={{ duration: 0.5 }}
-                                    className="relative"
-                                >
-                                    {/* Global Back Button */}
-                                    <motion.button
-                                        onClick={handleBack}
-                                        initial={{ opacity: 0, x: -20 }}
-                                        animate={{ opacity: 1, x: 0, transition: { delay: 0.5 } }}
-                                        className="fixed top-8 left-8 z-50 flex items-center gap-2 text-zinc-400 hover:text-white transition-colors group bg-black/20 backdrop-blur-md px-4 py-2 rounded-full border border-white/5"
-                                    >
-                                        <IoArrowBack className="group-hover:-translate-x-1 transition-transform" />
-                                        <span className="text-sm font-medium uppercase tracking-wide">Back</span>
-                                    </motion.button>
-
-                                    {activeSection === 'about' && <About />}
-                                    {activeSection === 'experience' && <Experience />}
-                                    {activeSection === 'projects' && <Projects />}
-                                    {activeSection === 'contact' && <Contact />}
-                                </motion.div>
-                            )}
-                        </AnimatePresence>
-                    </main>
-                </motion.div>
-            )}
-        </>
-    );
+      {/* Footer */}
+      <Footer />
+    </div>
+  );
 };
 
 export default Home;

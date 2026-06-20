@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
-    @apply bg-black text-white antialiased overflow-x-hidden font-sans;
+    @apply bg-brand-bg text-brand-text antialiased overflow-x-hidden font-sans selection:bg-brand-peach selection:text-brand-primary;
   }
 }
 
